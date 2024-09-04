@@ -31,7 +31,7 @@ export const generateCalendarDays = ({ month, year }) => {
   }
 
   let dayCounterNextMonth = 1;
-  while (calendarDays.length < 35) {
+  while (calendarDays.length < 42) {
     calendarDays.push(dayCounterNextMonth++);
   }
 

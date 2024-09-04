@@ -1,31 +1,49 @@
-
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 columns, equal width */
-  grid-gap: 10px; /* Space between the grid items */
-  max-width: 600px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  max-width: 60vw;
+  max-height: 65vh;
   margin: 0 auto;
 }
 
 .day-name {
   font-weight: bold;
-  background-color: black;
+  background-color: #333;
   padding: 10px;
   text-align: center;
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .calendar-day {
   background-color: #ffffff;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   color: #000000;
+  border-radius: 4px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.not-current-month{
-  color: red;
+
+.calendar-day:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.not-current-month {
+  color: #b0b0b0;
+  background-color: #f9f9f9;
+}
+
+.current-day {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 50%;
 }

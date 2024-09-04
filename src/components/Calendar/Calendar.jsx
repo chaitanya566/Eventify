@@ -8,15 +8,23 @@ const project = {
   title: "Project Alpha",
   description: "A placeholder project description.",
 };
+
 const Calendar = () => {
   const currentDate = useContext(calendarMonthContext);
+  console.log(currentDate.month);
   return (
     <div>
-      <h1>{currentDate.month} {currentDate.year}</h1>
-      <div className="calendarNav">
-        <button onClick={currentDate.previousMonth}>&lt;</button>
-        <div className="month-display">Month Year</div>
-        <button onClick={currentDate.nextMonth}>&gt;</button>
+      <div className="Nav">
+        <div className="calendarNav">
+          <button className="monthChange " onClick={currentDate.previousMonth}>
+            &lt;
+          </button>
+          <div className="month-display">{currentDate.month}</div>
+          <button className="monthChange " onClick={currentDate.nextMonth}>
+            &gt;
+          </button>
+        </div>
+        <div className="year-display">{currentDate.year}</div>
       </div>
       <CalendarTemplate project={project} />
     </div>
