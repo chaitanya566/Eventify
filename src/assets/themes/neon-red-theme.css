@@ -1,0 +1,20 @@
+:root {
+  --calendar-bg-color: #333;
+  --text-color: #FFFFFF;
+  --border-color: #E60540;
+  --border-color-main: #01F3F4;
+
+  --button-bg-color:#1a1a1a;
+  --button-bg-color-hover:#1a1a1a;
+
+  --calendar-date-color:#FFFFFF;
+  --calendar-date-bg-color: #141C24;
+  --calendar-date-border-color: #E60540;
+  --calendar-date-bg-color-hover: #141C24;
+  
+  --not-current-month-color:#b0b0b0;
+  --not-current-month-bg-color: #1A232C;
+  --not-current-month-border-color: #FF1B66;
+
+  --main-bg-color:#181824;
+}

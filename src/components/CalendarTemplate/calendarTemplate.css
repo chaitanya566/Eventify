@@ -9,41 +9,34 @@
 
 .day-name {
   font-weight: bold;
-  background-color: #333;
+  background-color: var(--calendar-bg-color);
   padding: 10px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-color);
   border-radius: 4px;
 }
 
 .calendar-day {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: var(--calendar-date-bg-color);
+  border: 1px solid var(--calendar-date-border-color);
   padding: 30px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: var(--calendar-date-color);
   border-radius: 4px;
   font-size: 1.2em;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .calendar-day:hover {
-  background-color: #f0f0f0;
+  background-color: var(--calendar-date-bg-color-hover);
   cursor: pointer;
 }
 
 .not-current-month {
-  color: #b0b0b0;
-  background-color: #f9f9f9;
-}
-
-.current-day {
-  background-color: #007bff;
-  color: #ffffff;
-  font-weight: bold;
-  border-radius: 50%;
+  color: var(--not-current-month-color);
+  background-color: var(--not-current-month-bg-color);
 }

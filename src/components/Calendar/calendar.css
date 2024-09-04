@@ -23,14 +23,15 @@
 }
 .monthChange {
   padding: 15px;
-  background-color: #1a1a1a;
+  background-color: var(--calendar-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: auto;
+  color:var(--text-color);
 }
 .monthChange:hover {
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--calendar-date-border-color);
 }
 
 .month-display,
@@ -39,11 +40,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: 1px solid #333;
-  background-color: #333;
+  border: 1px solid var(--calendar-bg-color);
+  background-color: var(--calendar-bg-color);
 }
 .month-display:hover,
 .year-display:hover {
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--calendar-date-border-color);
   cursor: pointer;
 }
