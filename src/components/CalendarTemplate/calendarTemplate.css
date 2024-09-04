@@ -1,0 +1,31 @@
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns, equal width */
+  grid-gap: 10px; /* Space between the grid items */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.day-name {
+  font-weight: bold;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.calendar-day {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+.not-current-month{
+  color: red;
+}
