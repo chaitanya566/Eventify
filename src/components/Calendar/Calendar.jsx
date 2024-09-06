@@ -11,7 +11,6 @@ const project = {
 
 const Calendar = () => {
   const currentDate = useContext(calendarMonthContext);
-  console.log(currentDate.month);
   return (
     <div>
       <div className="Nav">

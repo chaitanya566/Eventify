@@ -3,57 +3,46 @@ import ReactDOM from "react-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./inputTaskdetails.css"; // Separate CSS for the modal
+import PropTypes from "prop-types";
+import { useTasks } from "src/Contexts/Tasks/taskHooks";
+import { TaskCategories } from "src/utils/TasksConfig.json";
+import {
+  handleOverlayClick,
+  handleSubmit,
+  addScrollListenerToCategoryBox,
+} from "./utils_inputTask.js";
 
-const ModalForm = ({ isOpen, onClose }) => {
-  const [selectedCategory, setSelectedCategory] = useState("Task"); // Default value "Task"
-  const [input2, setInput2] = useState("");
+const ModalForm = ({ isOpen, onClose, extraData }) => {
+  const [selectedCategory, setSelectedCategory] = useState("Task");
+  const [taskDesc, setTaskDesc] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
   const categoryBoxRef = useRef(null);
 
-  const handleOverlayClick = (e) => {
-    if (e.target.classList.contains("modal-overlay")) {
-      onClose();
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Does nothing for now
-    console.log({ selectedCategory, input2, selectedDate }); // Just logging values for now
-  };
-
+  const { state, dispatch } = useTasks();
   useEffect(() => {
-    const categoryBox = categoryBoxRef.current;
-    if (categoryBox) {
-      const handleWheelScroll = (event) => {
-        // Check if scroll is vertical and prevent default behavior only when necessary
-        if (event.deltaY !== 0) {
-          event.preventDefault();
-          categoryBox.scrollLeft += event.deltaY; // Scroll horizontally using the vertical scroll delta
-        }
-      };
+    const cleanupListener = addScrollListenerToCategoryBox(
+      isOpen,
+      categoryBoxRef
+    );
+    
+    return cleanupListener;
+  }, [isOpen]);
 
-      categoryBox.addEventListener("wheel", handleWheelScroll);
-
-      return () => {
-        categoryBox.removeEventListener("wheel", handleWheelScroll); // Clean up the event listener
-      };
-    }
-  }, []);
-
-  const categories = ["Task", "Important", "Birthday", "Event", "Celebration"];
+  const categories = TaskCategories;
 
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <div className="modal-overlay" onClick={handleOverlayClick}>
+    <div
+      className="modal-overlay"
+      onClick={(e) => handleOverlayClick(e, onClose)}
+    >
       <div className="modal-content">
         <button className="close-btn" onClick={onClose}>
           X
         </button>
         <h2>Fill out the form</h2>
 
-        {/* Category Selection */}
         <div className="category-boxes" ref={categoryBoxRef}>
           {categories.map((category) => (
             <div
@@ -70,23 +59,47 @@ const ModalForm = ({ isOpen, onClose }) => {
 
         <input
           type="text"
-          placeholder="Input 2"
-          value={input2}
-          onChange={(e) => setInput2(e.target.value)}
+          placeholder="Enter Description"
+          value={taskDesc}
+          onChange={(e) => setTaskDesc(e.target.value)}
+          required
         />
         <DatePicker
           selected={selectedDate}
           onChange={(date) => setSelectedDate(date)}
-          placeholderText="Select a date"
+          placeholderText="Select a Deadline date"
         />
 
         <div className="button-group">
-          <button onClick={handleSubmit}>Submit</button>
+          <button
+            onClick={(e) =>
+              handleSubmit(e, {
+                selectedCategory,
+                taskDesc,
+                selectedDate,
+                extraData,
+                dispatch,
+                state,
+                onClose,
+                setSelectedCategory,
+                setTaskDesc,
+                setSelectedDate,
+              })
+            }
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>,
     document.body
   );
+};
+
+ModalForm.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  extraData: PropTypes.object,
 };
 
 export default ModalForm;
