@@ -16,7 +16,7 @@
   --not-current-month-bg-color: #0F1F1F;
   --not-current-month-border-color: #01F7F7;
 
-  --main-bg-color:#061919;
+  --main-bg-color:#040d0d;
 
   --task-form-close: url(./icons/window_close.png);
   --task-Task-icon: url(./icons/clipboard-user.png);
@@ -24,4 +24,10 @@
   --task-important-icon:url(./icons/notification_important.png);
   --task-event-icon:url(./icons/event.png);
   --task-celebration-icon:url(./icons/celebration.png);
+
+  --GitHub-Icon: url(./icons/Github.png);
+  --LinkedIn-Icon: url(./icons/LinkedIn.png);
+
+  --sideBar-bg-color:#061919;
+  
 }

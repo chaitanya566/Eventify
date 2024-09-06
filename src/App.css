@@ -1,9 +1,30 @@
 .App {
   font-family: Arial, sans-serif;
   justify-content: center;
-  padding: 20px;
+    display: flex;
+  flex-direction: row;
 }
 .app-container{
   display: flex;
   flex-direction: row;
+}
+
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+
+.SideBar {
+  flex: 0 0 auto; 
+  width: 200px;
+  height: 100%;
+}
+
+.calendar-container {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
 }

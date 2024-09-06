@@ -1,0 +1,24 @@
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-dropdown {
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #f5f5f5;
+  border-radius: 4px;
+  background-color: #333;
+}
+
+.theme-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}

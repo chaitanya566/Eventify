@@ -1,0 +1,40 @@
+.sideBarContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px; /* Adjust as needed */
+  box-sizing: border-box;
+  background-color: var(--sideBar-bg-color);
+  border-radius: 5px;
+}
+
+.header {
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+#download-UserData {
+  margin: 20px;
+  margin-left: 0px;
+  background-color: var(--button-bg-color);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+#download-UserData:hover {
+  transition: transform 0.3s ease;
+  border-color:var(--border-color);
+  background-color: var( --button-bg-color);
+}

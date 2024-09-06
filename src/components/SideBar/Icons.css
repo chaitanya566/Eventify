@@ -1,0 +1,58 @@
+.dot {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.Github {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--sideBar-bg-color);
+  overflow: hidden;
+}
+
+.Github::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: var(--GitHub-Icon) no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.LinkedIn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--sideBar-bg-color);
+  overflow: hidden;
+}
+
+.LinkedIn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: var(--LinkedIn-Icon) no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+}

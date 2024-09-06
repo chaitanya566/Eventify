@@ -4,16 +4,23 @@ import "src/assets/themes/dark-Theme/dark-theme.css";
 import { TaskProvider } from "./Contexts/Tasks/TaskContext";
 import "./App.css";
 
+import SideBar from "./components/SideBar/SideBar";
+import ThemeDropdown from "./components/ThemeSelection/ThemeDropdown";
+
 function App() {
   return (
     <>
       <div className="App">
         <TaskProvider>
           <CalendarMonthReducer>
-            <Calendar />
+            <div className="layout">
+              <SideBar />
+              <div className="calendar-container">
+                <Calendar />
+              </div>
+            </div>
           </CalendarMonthReducer>
         </TaskProvider>
-        ;
       </div>
     </>
   );

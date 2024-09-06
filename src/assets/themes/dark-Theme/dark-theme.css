@@ -1,5 +1,5 @@
 :root {
-  --calendar-bg-color: #333;
+  --calendar-bg-color: #242424;
   --text-color: rgba(255, 255, 255, 0.87);
   --border-color: #f0f0f0;
   --border-color-main: #f0f0f0;
@@ -16,12 +16,19 @@
   --not-current-month-color: #888888;
   --not-current-month-border-color: #888888;
 
-  --main-bg-color: #242424;
+  --main-bg-color: #2c2c2c;
 
   --task-form-close: url(./icons/window_close.png);
   --task-Task-icon: url(./icons/clipboard-user.png);
   --task-birthday-icon: url(./icons/cake-candles.png);
-  --task-important-icon:url(./icons/notification_important.png);
-  --task-event-icon:url(./icons/event.png);
-  --task-celebration-icon:url(./icons/celebration.png);
+  --task-important-icon: url(./icons/notification_important.png);
+  --task-event-icon: url(./icons/event.png);
+  --task-celebration-icon: url(./icons/celebration.png);
+
+  --GitHub-Icon: url(./icons/Github.png);
+  --LinkedIn-Icon: url(./icons/LinkedIn.png);
+
+  --sideBar-bg-color:#242424;
+  
+  
 }
