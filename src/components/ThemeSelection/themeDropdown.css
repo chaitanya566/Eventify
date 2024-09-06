@@ -22,3 +22,12 @@
   height: 20px;
   border-radius: 50%;
 }
+.theme-dropdown{
+  background-color: var(--button-bg-color);
+  border-color:var(--button-bg-color)
+}
+.theme-dropdown:hover{
+  cursor: pointer;
+  border-color:var(--border-color);
+  transition: transform 0.3s ease;
+}

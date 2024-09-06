@@ -31,10 +31,14 @@
   margin-left: 0px;
   background-color: var(--button-bg-color);
   padding: 15px;
+  border:2px solid var(--button-bg-color);
   transition: transform 0.3s ease;
 }
 #download-UserData:hover {
   transition: transform 0.3s ease;
   border-color:var(--border-color);
   background-color: var( --button-bg-color);
+}
+#headerName{
+  color:var(--border-color);
 }

@@ -7,9 +7,9 @@
 .task-dot {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background-color: #007bff; /* Default color */
+    background-color: var(--calendar-date-bg-color); /* Default color */
     background-size: cover;
+    background-size: contain;
     background-position: center;
     transition: transform 0.2s ease;
 }

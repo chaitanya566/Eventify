@@ -8,7 +8,6 @@ const Tooltip = () => {
     top: 0,
     left: 0,
   });
-  console.log(tooltip);
   useEffect(() => {
     const handleMouseMove = (event) => {
       if (tooltip.visible) {
@@ -21,8 +20,6 @@ const Tooltip = () => {
     };
 
     const handleMouseEnter = (event) => {
-      const newText = event.target.getAttribute("data-text");
-      console.log("Mouse Enter:", newText);
       setTooltip({
         text: event.target.getAttribute("data-text"),
         visible: true,
@@ -47,7 +44,6 @@ const Tooltip = () => {
       // Cleanup event listeners
       return () => {
         elements.forEach((element) => {
-          console.log("cleaning")
           element.removeEventListener("mouseenter", handleMouseEnter);
           element.removeEventListener("mousemove", handleMouseMove);
           element.removeEventListener("mouseleave", handleMouseLeave);

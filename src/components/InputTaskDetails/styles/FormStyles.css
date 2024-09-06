@@ -24,9 +24,6 @@ button {
   font-size: 16px;
 }
 
-button:hover {
-  background-color: var(--button-bg-color-hover);
-}
 
 /* Styles for category boxes */
 .category-boxes {
@@ -41,7 +38,7 @@ button:hover {
 
 .category-box {
   flex: 0 0 auto; 
-  background-color: blue;
+  background-color: var(--form-button-bg-color);
   text-align: center;
   font-size: 18px;
   border-radius: 8px;
@@ -51,7 +48,7 @@ button:hover {
 }
 
 .category-box:hover {
-  background-color: #e0e0e0;
+  background-color: var(--form-button-bg-color-hover);
 }
 
 .selected {
@@ -64,5 +61,5 @@ button:hover {
 .task-submit,
 .task-date-input {
   border-radius: 5px;
-  border: 2px solid blue;
+  border: 2px solid var(--border-color);
 }

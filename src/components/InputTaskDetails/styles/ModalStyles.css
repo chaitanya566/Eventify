@@ -16,7 +16,7 @@
 
 .modal-content {
   position: relative;
-  background: red;
+  background: var(--button-bg-color);
   padding: 30px;
   border-radius: 8px;
   max-width: 400px;
@@ -37,8 +37,9 @@
   height: 32px;
   width: 32px;
   background: var(--task-form-close) no-repeat center center;
+  
 }
 
 .close-btn:hover {
-  color: #007bff;
+  color: var(--sideBar-bg-color);
 }

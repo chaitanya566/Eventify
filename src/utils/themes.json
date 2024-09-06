@@ -1,20 +1,20 @@
 [
   {
     "themeName": "Dark Theme",
-    "circle1": "white",
-    "circle2": "black",
-    "circle3": "grey"
+    "circle1": "#f0f0f0",
+    "circle2": "#2c2c2c",
+    "circle3": "black"
   },
   {
     "themeName": "Neon Red Theme",
     "circle1": "#ff4d4d",
-    "circle2": "#ff1a1a",
-    "circle3": "#ff0000"
+    "circle2": "#e60540",
+    "circle3": "#ffffff"
   },
   {
     "themeName": "Neon Blue Theme",
-    "circle1": "#4da6ff",
-    "circle2": "#1a8cff",
-    "circle3": "#0066ff"
+    "circle1": "#040d0d",
+    "circle2": "#01F7F7",
+    "circle3": "#FFFFFF"
   }
 ]

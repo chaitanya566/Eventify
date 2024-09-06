@@ -1,9 +1,10 @@
 //Taskcalendar.jsx
 import "./taskCalendar.css";
+import { useMemo } from "react";
 import PropTypes from "prop-types";
 import { useTasks } from "src/Contexts/Tasks/taskHooks";
-import calenderConfig from "src/utils/calendarConfig.json"
-
+import calenderConfig from "src/utils/calendarConfig.json";
+import { getRandomColor } from "./colorSelection";
 const TaskList = ({ ID }) => {
   const { state } = useTasks();
 
@@ -24,16 +25,15 @@ const TaskList = ({ ID }) => {
     return taskDate.getDate() === day && taskDate.getMonth() === monthIndex;
   });
 
-return (
-  <div className="all-task-dots">
-    {filteredTasks.length > 0 &&
-      filteredTasks.map((task, index) => (
-        <TaskDot key={task.id + index} task={task} />
-      ))}
-  </div>
-);
+  return (
+    <div className="all-task-dots">
+      {filteredTasks.length > 0 &&
+        filteredTasks.map((task, index) => (
+          <TaskDot key={task.id + index} task={task} />
+        ))}
+    </div>
+  );
 };
-
 
 TaskList.propTypes = {
   ID: PropTypes.string.isRequired,
@@ -41,15 +41,22 @@ TaskList.propTypes = {
 
 const TaskDot = ({ task }) => {
   const { description, deadline, type, completed } = task;
-
+  const selectedColor = useMemo(() => getRandomColor(), []);
   const getTypeStyles = () => {
     switch (type) {
       case "Event":
-        return { backgroundImage: "url(src/assets/react.svg)" };
+        return { backgroundImage: "var(--task-event-icon)" };
       case "Important":
-        return { backgroundImage: "url(src/assets/react.svg)" };
+        return { backgroundImage: "var(--task-important-icon)" };
+      case "Celebration":
+        return { backgroundImage: "var(--task-celebration-icon)" };
+      case "Birthday":
+        return { backgroundImage: "var(--task-birthday-icon)" };
       default:
-        return { backgroundColor: "#007bff" };
+        return {
+          backgroundColor: selectedColor,
+          borderRadius: "50%",
+        };
     }
   };
 
