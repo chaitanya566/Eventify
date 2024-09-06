@@ -1,16 +1,17 @@
-import { useEffect, useState, useRef } from "react";
-import ReactDOM from "react-dom";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import "./inputTaskdetails.css"; // Separate CSS for the modal
-import PropTypes from "prop-types";
-import { useTasks } from "src/Contexts/Tasks/taskHooks";
-import { TaskCategories } from "src/utils/TasksConfig.json";
+// InputTaskDetails.jsx
 import {
+  useEffect,
+  useState,
+  useRef,
+  ReactDOM,
+  DatePicker,
+  PropTypes,
+  useTasks,
+  TaskCategories,
   handleOverlayClick,
   handleSubmit,
   addScrollListenerToCategoryBox,
-} from "./utils_inputTask.js";
+} from "./index";
 
 const ModalForm = ({ isOpen, onClose, extraData }) => {
   const [selectedCategory, setSelectedCategory] = useState("Task");
@@ -19,12 +20,13 @@ const ModalForm = ({ isOpen, onClose, extraData }) => {
   const categoryBoxRef = useRef(null);
 
   const { state, dispatch } = useTasks();
+
   useEffect(() => {
     const cleanupListener = addScrollListenerToCategoryBox(
       isOpen,
       categoryBoxRef
     );
-    
+
     return cleanupListener;
   }, [isOpen]);
 

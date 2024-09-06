@@ -1,12 +1,11 @@
+//Taskcalendar.jsx
 import "./taskCalendar.css";
 import PropTypes from "prop-types";
 import { useTasks } from "src/Contexts/Tasks/taskHooks";
 import calenderConfig from "src/utils/calendarConfig.json"
 
 const TaskList = ({ ID }) => {
-  const { state } = useTasks(); // use the tasks from state
-
-  console.log(state); // Ensure state has the expected structure { tasks: [...] }
+  const { state } = useTasks();
 
   // Access the tasks array in state
   if (!Array.isArray(state.tasks)) {
