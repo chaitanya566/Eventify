@@ -1,0 +1,105 @@
+.Birthday {
+    position: relative;
+    width: 35px;
+    height: 40px;
+    padding: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Birthday::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--task-birthday-icon) no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.Important {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Important::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--task-important-icon) no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+}
+
+.Task {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Task::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--task-Task-icon) no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+}
+.Event {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Event::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--task-event-icon) no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+}
+.Celebration {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: blue;
+    overflow: hidden;
+}
+
+.Celebration::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--task-celebration-icon) no-repeat center center;
+    background-size: contain;
+    z-index: 1;
+}
+
+
+

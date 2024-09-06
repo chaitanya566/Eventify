@@ -1,0 +1,22 @@
+.date-info {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  bottom:25px;
+  right:25px;
+}
+.all-task-dots{
+  position: absolute;
+  bottom:5px;
+  right:5px;
+  display: flex;
+  flex-direction: row;
+  max-width:80%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}

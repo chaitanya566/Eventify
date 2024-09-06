@@ -25,7 +25,7 @@ const TaskList = ({ ID }) => {
   });
 
 return (
-  <div>
+  <div className="all-task-dots">
     {filteredTasks.length > 0 &&
       filteredTasks.map((task, index) => (
         <TaskDot key={task.id + index} task={task} />

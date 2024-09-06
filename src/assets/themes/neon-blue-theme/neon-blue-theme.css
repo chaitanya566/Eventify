@@ -17,4 +17,11 @@
   --not-current-month-border-color: #01F7F7;
 
   --main-bg-color:#061919;
+
+  --task-form-close: url(./icons/window_close.png);
+  --task-Task-icon: url(./icons/clipboard-user.png);
+  --task-birthday-icon: url(./icons/cake-candles.png);
+  --task-important-icon:url(./icons/notification_important.png);
+  --task-event-icon:url(./icons/event.png);
+  --task-celebration-icon:url(./icons/celebration.png);
 }

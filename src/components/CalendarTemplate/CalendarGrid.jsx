@@ -38,7 +38,7 @@ const CalendarGrid = ({ month, onDayClick }) => {
             id={TempID}
             onClick={() => onDayClick(TempID)}
           >
-            {day ? day : ""}
+            <p className="date-info">{day ? day : ""}</p>
             <TaskList ID={TempID} />
           </div>
         );

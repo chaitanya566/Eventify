@@ -1,0 +1,27 @@
+:root {
+  --calendar-bg-color: #333;
+  --text-color: #ffffff;
+  --border-color: #e60540;
+  --border-color-main: #01f3f4;
+
+  --button-bg-color: #1a1a1a;
+  --button-bg-color-hover: #1a1a1a;
+
+  --calendar-date-color: #ffffff;
+  --calendar-date-bg-color: #141c24;
+  --calendar-date-border-color: #e60540;
+  --calendar-date-bg-color-hover: #141c24;
+
+  --not-current-month-color: #b0b0b0;
+  --not-current-month-bg-color: #1a232c;
+  --not-current-month-border-color: #ff1b66;
+
+  --main-bg-color: #181824;
+
+  --task-form-close: url(./icons/window_close.png);
+  --task-Task-icon: url(./icons/clipboard-user.png);
+  --task-birthday-icon: url(./icons/cake-candles.png);
+  --task-important-icon: url(./icons/notification_important.png);
+  --task-event-icon: url(./icons/event.png);
+  --task-celebration-icon: url(./icons/celebration.png);
+}

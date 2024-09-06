@@ -20,3 +20,4 @@ export { default as ModalForm } from "../InputTaskDetails/InputTaskDetails";
 
 // CSS import
 import "./calendarTemplate.css";
+import "./dateGridStyle.css";

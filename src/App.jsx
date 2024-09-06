@@ -1,6 +1,6 @@
 import Calendar from "./components/Calendar/Calendar";
 import CalendarMonthReducer from "src/Contexts/calendarCurrentMonth/calendarMonthReducer";
-import "src/assets/themes/dark-theme.css";
+import "src/assets/themes/dark-Theme/dark-theme.css";
 import { TaskProvider } from "./Contexts/Tasks/TaskContext";
 import "./App.css";
 

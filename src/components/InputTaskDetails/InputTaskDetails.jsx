@@ -11,6 +11,7 @@ import {
   handleOverlayClick,
   handleSubmit,
   addScrollListenerToCategoryBox,
+  Tooltip,
 } from "./index";
 
 const ModalForm = ({ isOpen, onClose, extraData }) => {
@@ -40,40 +41,41 @@ const ModalForm = ({ isOpen, onClose, extraData }) => {
       onClick={(e) => handleOverlayClick(e, onClose)}
     >
       <div className="modal-content">
-        <button className="close-btn" onClick={onClose}>
-          X
-        </button>
-        <h2>Fill out the form</h2>
+        <button className="close-btn" onClick={onClose}></button>
+        <h2 className="task-input-header">Enter the Task Details</h2>
 
         <div className="category-boxes" ref={categoryBoxRef}>
           {categories.map((category) => (
             <div
               key={category}
-              className={`category-box ${
+              data-text={category}
+              className={`category-box ${category} ${
                 selectedCategory === category ? "selected" : ""
               }`}
               onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </div>
+            ></div>
           ))}
+          <Tooltip />
         </div>
 
         <input
           type="text"
           placeholder="Enter Description"
           value={taskDesc}
+          className="task-desc-input"
           onChange={(e) => setTaskDesc(e.target.value)}
           required
         />
         <DatePicker
           selected={selectedDate}
+          className="task-date-input"
           onChange={(date) => setSelectedDate(date)}
           placeholderText="Select a Deadline date"
         />
 
         <div className="button-group">
           <button
+            className="task-submit"
             onClick={(e) =>
               handleSubmit(e, {
                 selectedCategory,

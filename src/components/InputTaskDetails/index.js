@@ -10,8 +10,6 @@ export { default as ReactDOM } from "react-dom";
 export { default as DatePicker } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Styles for the DatePicker
 
-// CSS for modal
-import "./inputTaskdetails.css"; // Separate CSS for the modal
 
 // PropTypes for type checking
 export { default as PropTypes } from "prop-types";
@@ -28,3 +26,12 @@ export {
   handleSubmit,
   addScrollListenerToCategoryBox,
 } from "./utils_inputTask.js";
+
+//get Tool tip 
+export { default as Tooltip } from "./TooltipComponent";
+
+// CSS 
+import "./styles/taskIcon.css";
+import "./styles/toolTip.css";
+import "./styles/FormStyles.css";
+import "./styles/ModalStyles.css";
