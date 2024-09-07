@@ -20,17 +20,17 @@
 }
 .task-details {
     display: none;
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    background: var(--sideBar-bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 10px;
     position: absolute;
-    color:black;
-    top: 100%; /* Position below the dot */
+    color:var(--text-color);
+    top: 100%;
     left: 0;
-    margin-top: 5px; /* Space between dot and details */
+    margin-top: 5px;
     z-index: 10;
-    width: 200px; /* Adjust as needed */
+    width: 200px;
 }
 
 .task-dot:hover + .task-details {
