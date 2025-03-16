@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./ThemeDropdown.css";
+import "./themeDropdown.css";
 import themes from "src/utils/themes.json";
 import themeStyles from "./themeStyles";
 
