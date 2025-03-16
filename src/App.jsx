@@ -6,7 +6,6 @@ import "./App.css";
 
 import SideBar from "./components/SideBar/SideBar";
 import ThemeDropdown from "./components/ThemeSelection/ThemeDropdown";
-
 function App() {
   return (
     <>
