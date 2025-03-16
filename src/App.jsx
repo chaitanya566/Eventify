@@ -1,11 +1,12 @@
 import Calendar from "./components/Calendar/Calendar";
-import CalendarMonthReducer from "src/Contexts/calendarCurrentMonth/calendarMonthReducer";
+import CalendarMonthReducer from "./Contexts/calendarCurrentMonth/CalendarMonthReducer";
 import "src/assets/themes/dark-Theme/dark-theme.css";
 import { TaskProvider } from "./Contexts/Tasks/TaskContext";
 import "./App.css";
 
 import SideBar from "./components/SideBar/SideBar";
 import ThemeDropdown from "./components/ThemeSelection/ThemeDropdown";
+
 function App() {
   return (
     <>
@@ -26,4 +27,3 @@ function App() {
 }
 
 export default App;
-
